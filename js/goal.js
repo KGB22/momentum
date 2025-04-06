@@ -159,7 +159,6 @@ function resetGoal() {
 
   midnight.setHours(24, 0, 0, 0);
   const delay = midnight.getTime() - now.getTime();
-  console.log(delay);
   setTimeout(runAtMidnight, delay);
 }
 
