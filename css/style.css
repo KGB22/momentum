@@ -1,0 +1,423 @@
+@import url("https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.micro-5-regular {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Galmuri11", sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#box {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#login-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 170px minmax(auto, 1fr) 170px;
+  grid-template-rows: auto 200px;
+  padding: 20px;
+}
+
+#login-form {
+  grid-row: 1;
+  grid-column: 2;
+  place-self: end center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#login-form div {
+  font-weight: 600;
+  font-family: "Galmuri9", sans-serif;
+  color: white;
+  font-size: 50px;
+}
+
+#login-form input {
+  font-size: 50px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background: none;
+}
+
+#login-form button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgba(221, 221, 221, 0.568);
+  color: #ebebeb;
+  border: 2px solid #ebebeb;
+  border-radius: 30px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  &:hover {
+    background-color: rgba(233, 233, 233, 0.568);
+    border: 2px solid white;
+    color: white;
+  }
+}
+
+#clock-container {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+#clock {
+  font-family: "Galmuri9", sans-serif;
+  display: flex;
+  font-size: 100px;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+.time {
+  width: 120px;
+  text-align: center;
+}
+
+img#background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#greeting {
+  font-family: "Galmuri9", sans-serif;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+#main-goal-form {
+  grid-row: 3;
+  grid-column: 2;
+  justify-self: center;
+  align-self: flex-end;
+  text-align: center;
+}
+#main-goal-form input {
+  outline: none;
+  border: none;
+  background: none;
+  text-align: center;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+  max-width: 943px;
+}
+
+#checkbox {
+  width: 20px;
+}
+
+#goal {
+  font-size: 30px;
+  color: white;
+}
+
+li {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  &:visited {
+    text-decoration: none;
+    color: #242424;
+  }
+}
+#main-box img {
+  grid-column: 3;
+  grid-row: 4;
+  z-index: 3;
+  width: auto;
+  place-self: end end;
+  height: 120px;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.move:hover {
+  animation: move 0.5s ease-in-out infinite;
+}
+
+.scale:hover {
+  animation: scale 0.3s ease-in-out infinite;
+}
+
+#todoBox {
+  grid-column: 3;
+  grid-row: 3;
+  place-self: end;
+  width: 320px;
+  overflow-y: scroll;
+  max-height: 649px;
+  background-color: #c6c6c6;
+  padding: 20px;
+  border: outset 2mm white;
+  border-radius: 3px;
+  outline: 1mm solid black;
+}
+
+#todo-form {
+  color: white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#todo-info {
+  text-align: center;
+  padding-bottom: 5px;
+}
+#todo-list div {
+  display: grid;
+  grid-template-columns: 30px 190px 30px;
+  padding-bottom: 5px;
+}
+
+#todo-list div span:first-child {
+  place-self: start center;
+}
+
+#todo-list div span:nth-child(2) {
+  word-wrap: break-word;
+}
+
+#todo-list div span:last-child {
+  place-self: start center;
+  padding-left: 5px;
+  cursor: pointer;
+  &:hover {
+    color: tomato;
+  }
+}
+
+#todo-form input {
+  outline: none;
+  background: none;
+  color: white;
+  width: 100%;
+  margin-top: 5px;
+  border-width: thick;
+}
+
+#quote {
+  grid-row: 4;
+  grid-column: 2;
+  place-self: end center;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+
+#quote div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#quote #author {
+  color: rgb(214, 214, 214);
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+#main-goal-list div {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(0, auto) minmax(110px, 1fr);
+  color: white;
+  font-size: 35px;
+  text-overflow: ellipsis;
+}
+
+#main-goal-list div span {
+  text-align: center;
+  align-items: center;
+}
+#main-goal-list div span:first-child {
+  grid-column: 1;
+  place-self: center center;
+
+  cursor: pointer;
+}
+#main-goal-list div span:nth-child(2) {
+  grid-column: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#main-goal-list div div {
+  grid-column: 3;
+  place-self: center center;
+  display: flex;
+  gap: 15px;
+}
+#main-goal-list div div span:first-child {
+  color: #8bea8e;
+  cursor: pointer;
+}
+#main-goal-list div div span:last-child {
+  color: #d98080;
+  cursor: pointer;
+}
+
+#content {
+  text-align: center;
+}
+
+#main-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 170px minmax(auto, 1fr) 170px;
+  grid-template-rows: 90px auto 150px 130px;
+  padding: 20px;
+}
+
+#today {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.done span {
+  color: rgb(215, 215, 215);
+}
+
+.done span:nth-child(2) {
+  text-decoration-line: line-through;
+}
+
+@keyframes showComment {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#comment {
+  opacity: 0;
+  place-self: start center;
+  max-width: 250px;
+  padding: 10px 30px;
+  grid-row: 1;
+  grid-column: 2;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  animation: showComment 3s ease-in-out;
+}
+
+#comment span:last-child {
+  padding-left: 10px;
+}
+
+.done1 #todo-content {
+  text-decoration-line: line-through;
+}
+
+#option {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+#option span:not(.select) {
+  width: 80px;
+  text-align: center;
+  border: 1.5mm outset white;
+  padding: 2px 10px;
+}
+
+.select {
+  width: 80px;
+  text-align: center;
+  padding: 2px 10px;
+  border: 1.5mm inset white;
+}
+
+#weather {
+  grid-row: 2;
+  grid-column: 2;
+  place-self: start center;
+  color: white;
+}
