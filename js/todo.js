@@ -48,7 +48,6 @@ function paintTodo(newTodo) {
   check.id = "check";
   btn.addEventListener("click", deleteTodo);
 
-  // ✅ 저장된 save 값이 "Y"인 경우 체크된 상태로 표시
   if (newTodo.save === "Y") {
     check.innerHTML = `<i class="bi bi-check-square-fill"></i>`;
     li.classList.add("done1");
