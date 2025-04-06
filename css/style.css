@@ -167,6 +167,15 @@ a {
   place-self: end end;
   height: 120px;
 }
+#task {
+  font-size: 10px;
+  grid-column: 3;
+  grid-row: 4;
+  place-self: start center;
+  color: white;
+  padding-top: 5px;
+  padding-left: 30px;
+}
 
 @keyframes scale {
   0% {
