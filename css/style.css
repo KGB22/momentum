@@ -251,6 +251,7 @@ a {
 
 #todo-list div span:first-child {
   place-self: start center;
+  cursor: pointer;
 }
 
 #todo-list div span:nth-child(2) {
