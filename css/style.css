@@ -88,7 +88,6 @@ body {
   grid-row: 2;
   justify-self: center;
   align-self: end;
-  padding-bottom: 20px;
 }
 
 #clock {
@@ -350,7 +349,7 @@ a {
   z-index: 3;
   display: grid;
   grid-template-columns: 170px minmax(auto, 1fr) 170px;
-  grid-template-rows: 90px auto 150px 130px;
+  grid-template-rows: 90px auto 170px 130px;
   padding: 20px;
 }
 
